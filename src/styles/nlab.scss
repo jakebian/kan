@@ -1,6 +1,8 @@
 // body {
 //     background-color: red!important
 // }
+@import "tippy";
+
 #Content {
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Computer Modern Serif'!important;
@@ -15,4 +17,10 @@
 
 body {
     font-family: 'Computer Modern Serif'!important
+}
+
+.tippy-tooltip-content {
+    max-width: 500px;
+    text-align: left;
+    padding: 20px
 }

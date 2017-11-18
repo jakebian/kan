@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "jquery": "^3.2.1",
+    "mathjax": "^2.7.1",
     "tippy.js": "^1.4.2"
   }
 }

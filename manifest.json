@@ -1,0 +1,70 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "128": "icons/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://ncatlab.org/*",
+        "https://ncatlab.org/*"
+      ],
+      "js": [
+        "scripts/contentscript.js"
+      ],
+      "css": [
+        "fonts/cms/cmun-serif.css",
+        "styles/nlab.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "fonts/cms/cmunrm.eot",
+    "fonts/cms/cmunbx.eot",
+    "fonts/cms/cmunti.eot",
+    "fonts/cms/cmunbi.eot",
+    "fonts/cms/cmunrm.woff",
+    "fonts/cms/cmunbx.woff",
+    "fonts/cms/cmunti.woff",
+    "fonts/cms/cmunbi.woff",
+    "fonts/cms/cmunrm.ttf",
+    "fonts/cms/cmunbx.ttf",
+    "fonts/cms/cmunti.ttf",
+    "fonts/cms/cmunbi.ttf",
+    "fonts/cms/cmunrm.svg",
+    "fonts/cms/cmunbx.svg",
+    "fonts/cms/cmunti.svg",
+    "fonts/cms/cmunbi.svg"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/icon-19.png",
+      "38": "icons/icon-38.png"
+    },
+    "default_title": "Extension Boilerplate",
+    "default_popup": "popup.html"
+  }
+}
+
+

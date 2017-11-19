@@ -51,8 +51,10 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "browserify-shim": "^3.8.14",
     "jquery": "^3.2.1",
     "mathjax": "^2.7.1",
+    "simpler-sidebar": "^2.2.3",
     "tippy.js": "^1.4.2"
   }
 }

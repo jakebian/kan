@@ -16,7 +16,16 @@
 }
 
 body {
-    font-family: 'Computer Modern Serif'!important
+    font-family: 'Computer Modern Serif'!important;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Computer Modern Serif'!important;
+        font-weight: normal;
+    }
+    p {
+        line-height: 2em;
+    }
+    * {
+    }
 }
 
 .tippy-tooltip-content {

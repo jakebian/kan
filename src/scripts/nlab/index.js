@@ -1,23 +1,10 @@
 import tippy from 'tippy.js';
 import $ from 'jquery';
-import 'mathjax';
+// import 'mathjax';
 
 
 $(document).ready(() => {
-    console.log('fuck');
-
-  const MathJax = window.MathJax;
-    // MathJax.Ajax.config.path["Contrib"] = "/MathJax";
-
-    // MathJax.Hub.Config({
-    //   MathML: { useMathMLspacing: true },
-    //   "HTML-CSS": { scale: 90,
-    //                 extensions: ["handle-floats.js"]
-    //   }
-    // });
-
-
-
+    console.log('asdsfucky fucaasdssdsdk');
 
     $('body').append(`
         <div id="fuckingtemp" style="display: none;">
@@ -53,11 +40,11 @@ $(document).ready(() => {
           console.log('loading text')
 
           $.get(elem.href, htmlBody => {
-            const defnBody = $($.parseHTML(htmlBody)).find('#definition').next('.num_defn')
-            content.innerHTML = defnBody.html()
-            console.log('loaded defn', defnBody)
-            console.log(window.MathJax)
-            // MathJax.Hub.Queue(["Typeset", MathJax.Hub, content])
+            const parsedBody = $($.parseHTML(htmlBody))
+            const defnElem = $('<div></div>').append(getDefn(parsedBody));
+            console.log('loaded defn', defnElem)
+
+            content.innerHTML = defnElem.html()
             tip.loading = false
           }).catch(e => {
             console.log(e)
@@ -86,3 +73,14 @@ $(document).ready(() => {
 
 }, 300)
 })
+
+function getDefn(parsedBody) {
+  const defnBody = parsedBody.find('#definition').next('.num_defn')
+  if (defnBody.length) {
+    return defnBody;
+  }
+  console.log('parsing...')
+  parsedBody.find('#definition').nextUntil('h2')
+  console.log('end parsing')
+  return parsedBody.find('#definition').nextUntil('h2').slice(0, 5)
+}

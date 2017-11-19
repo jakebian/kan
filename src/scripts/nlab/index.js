@@ -4,17 +4,14 @@ import $ from 'jquery';
 
 
 $(document).ready(() => {
-    console.log('asdsfucky fucaasdssdsdk');
+    console.log('asdsfucky fucayo wtfasdssdsdk');
 
     $('body').append(`
         <div id="fuckingtemp" style="display: none;">
-          loading definition...
+          ...
         </div>
     `)
 
-    $('body').append(`
-        <button class="btn btn-danger">Hover for a new image</button>
-    `);
 
     setTimeout(() => {
 
@@ -82,5 +79,5 @@ function getDefn(parsedBody) {
   console.log('parsing...')
   parsedBody.find('#definition').nextUntil('h2')
   console.log('end parsing')
-  return parsedBody.find('#definition').nextUntil('h2').slice(0, 5)
+  return parsedBody.find('#definition').nextUntil('h2').slice(0, 2)
 }

@@ -3,28 +3,83 @@
 // }
 @import "tippy";
 
-#Content {
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Computer Modern Serif'!important;
-        font-weight: normal;
-    }
-    p {
-        line-height: 2em;
-    }
-    * {
-    }
+.navigation {
+    display: none;
 }
-
 body {
     font-family: 'Computer Modern Serif'!important;
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Computer Modern Serif'!important;
         font-weight: normal;
     }
+    h2 {
+        margin-top: 50px;
+    }
+    h3 {
+        font-weight: bold;
+        font-style: italic;
+        margin-top: 40px;
+    }
     p {
         line-height: 2em;
+        font-size: 1.4em;
     }
     * {
+    }
+    strong {
+        font-style: italic;
+    }
+    span.theorem_label {
+        font-style: italic;
+    }
+    a {
+        text-decoration: none;
+        color: #222;
+        &:hover {
+            color: #555;
+            background: none;
+        }
+
+        &.existingWikiWord {
+            color: #2A9B65;
+            &:hover {
+                color: #27704A;
+                background: none;
+            }
+        }
+    }
+    img {
+        margin: 40px auto;
+        display: block;
+    }
+    h1#pageName {
+        font-size: 3.5em;
+        margin-bottom: 50px;
+        margin-top: 10vh;
+        color: #000;
+        .webName {
+            display: none;
+        }
+        #svg_logo {
+            font-size: .5em;
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            svg {
+                path {
+                    font-size: .5em;
+                    fill: rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+    .revisedby {
+        margin-top: 100px;
+    }
+    .maruku_toc {
+        li {
+            margin-top: 20px;
+        }
     }
 }
 
@@ -32,4 +87,8 @@ body {
     max-width: 500px;
     text-align: left;
     padding: 20px
+}
+
+.maruku-equation {
+    font-size: 1.4em;
 }

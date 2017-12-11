@@ -1,7 +1,7 @@
 {
-  "name": "extension-boilerplate",
+  "name": "Kan",
   "version": "0.0.2",
-  "description": "A template for creating cross-browser extensions",
+  "description": "A browser extension for reading nLab",
   "scripts": {
     "chrome-build": "cross-env TARGET=chrome gulp",
     "opera-build": "cross-env TARGET=opera gulp",

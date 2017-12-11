@@ -4,13 +4,14 @@
     display: none;
 }
 body {
-    font-family: 'Computer Modern Serif'!important;
+    font-family: 'Computer Modern Serif', 'Times New Roman'!important;
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Computer Modern Serif'!important;
+        font-family: 'Computer Modern Serif', 'Times New Roman'!important;
         font-weight: normal;
     }
     h2 {
         margin-top: 50px;
+        font-size: 2em;
     }
     h3 {
         font-weight: bold;
@@ -92,6 +93,15 @@ body {
 
     .toc div {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    div.standout {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        padding: 20px;
+        border-left: 0;
+        margin:0;
+        background: none;
     }
 }
 

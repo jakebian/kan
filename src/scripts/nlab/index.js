@@ -46,7 +46,7 @@ $(document).ready(() => {
     const tip = {
       loading: false
     }
-    $('#Content p a.existingWikiWord').each((idx, elem) => {
+    $('#Content a.existingWikiWord').each((idx, elem) => {
       if ($(elem).parents('.hide').length) {
         return;
       }
@@ -67,8 +67,9 @@ $(document).ready(() => {
 
           $.get(elem.href, htmlBody => {
             const parsedBody = $($.parseHTML(htmlBody))
-            const defnElem = $('<div></div>').append(getDefn(parsedBody));
-            console.log('loaded defn', defnElem)
+            const fetchedDefn = getDefn(parsedBody);
+            const defnElem = $('<div></div>').append(fetchedDefn);
+            console.log('loaded defn', fetchedDefn)
 
             content.innerHTML = defnElem.html()
             tip.loading = false
@@ -102,13 +103,31 @@ $(document).ready(() => {
 }, 300)
 })
 
+
+const defnSelectors = [
+  '#definition',
+  '#definitions',
+  '#idea',
+  '#overview',
+  '#scope',
+  '#statement'
+]
+
+function getDefnSource() {
+
+}
+
+function truncateBody() {
+
+}
+
 function getDefn(parsedBody) {
-  const try1 = getDefnForSelector(parsedBody, '#definition');
-  if (try1) { return try1; }
-  const try2 = getDefnForSelector(parsedBody, '#definitions');
-  if (try2) { return try2; }
-  return parsedBody.find('#revision').remove('.rightHandSide').find('p').slice(0, 3);
-  // const try3 = 
+
+  for (let i = 0; i < defnSelectors.length; i++) {
+      const attempt = getDefnForSelector(parsedBody, defnSelectors[i]);
+      if (attempt) { return attempt; }
+  }
+
 }
 
 function getDefnForSelector(parsedBody, selector) {
@@ -116,7 +135,7 @@ function getDefnForSelector(parsedBody, selector) {
   if (defnBody.length) {
     return defnBody;
   }
-  const altResult = parsedBody.find(selector).nextUntil('h2').slice(0, 2)
+  const altResult = parsedBody.find(selector).nextUntil('h2').slice(0, 3)
   if (altResult.length) {
     return altResult;
   }

@@ -10,7 +10,7 @@ body {
         font-weight: normal;
     }
     h2 {
-        margin-top: 50px;
+        margin-top: 80px;
         font-size: 2em;
     }
     h3 {
@@ -18,9 +18,9 @@ body {
         font-style: italic;
         margin-top: 40px;
     }
-    p {
+    p, li {
         line-height: 2em;
-        font-size: 1.4em;
+        font-size: 21px;
     }
     * {
     }
@@ -97,7 +97,8 @@ body {
 
     div.standout {
         border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 3px;
+        border-left: 0;
+        border-right: 0;
         padding: 20px;
         border-left: 0;
         margin:0;
@@ -135,4 +136,9 @@ body {
     height: 100%;
     overflow-y: auto;
     padding-left: 2.5em!important;
+}
+
+.tippy-tooltip-content {
+    max-height: 450px;
+    overflow-y: auto;
 }

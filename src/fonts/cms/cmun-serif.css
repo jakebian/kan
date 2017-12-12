@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'Computer Modern Serif';
-	src: url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunrm.eot');
-	src: url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunrm.woff') format('woff'),
-		 url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunrm.ttf') format('truetype');
+	src: url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunrm.eot');
+	src: url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunrm.woff') format('woff'),
+		 url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunrm.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -10,9 +10,9 @@
 
 @font-face {
 	font-family: 'Computer Modern Serif';
-	src: url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunbx.eot');
-	src: url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunbx.woff') format('woff'),
-		 url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunbx.ttf') format('truetype'),
+	src: url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunbx.eot');
+	src: url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunbx.woff') format('woff'),
+		 url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunbx.ttf') format('truetype'),
 	font-weight: bold;
 	font-style: normal;
 }
@@ -20,9 +20,9 @@
 
 @font-face {
 	font-family: 'Computer Modern Serif';
-	src: url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunti.eot');
-	src: url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunti.woff') format('woff'),
-		 url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunti.ttf') format('truetype');
+	src: url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunti.eot');
+	src: url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunti.woff') format('woff'),
+		 url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunti.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 }
@@ -30,9 +30,9 @@
 
 @font-face {
 	font-family: 'Computer Modern Serif';
-	src: url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunbi.eot');
-	src: url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunbi.woff') format('woff'),
-		 url('chrome-extension://__MSG_@@extension_id__/fonts/cms/cmunbi.ttf') format('truetype');
+	src: url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunbi.eot');
+	src: url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunbi.woff') format('woff'),
+		 url('moz-extension://__MSG_@@extension_id__/fonts/cms/cmunbi.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
 }

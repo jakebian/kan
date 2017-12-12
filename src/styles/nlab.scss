@@ -85,6 +85,14 @@ body {
     .revisedby {
         margin-top: 100px;
     }
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
     .maruku_toc {
         p, li {
             font-size: 18px;
@@ -97,13 +105,35 @@ body {
                 }
             }
         }
+    }
+
+    #side-toc {
+        ul {
+            padding-left: 20px;
+        }
+        p, li {
+            font-size: 15px;
+            line-height: 1.2em;
+            margin-top: 15px;
+            a {
+                color: #555;
+                &.is-inview {
+                    color: #2A9B65;
+                    border-radius: 3px;
+                    border-bottom: 1px solid #2A9B65;
+                }
+            }
+        }
+        background-color: #fff;
         position: fixed;
         left: 0;
         top: 0;
-        max-width: 300px;
+        max-width: 250px;
         max-height: 100%;
         overflow-y: auto;
-        padding-top: 100px;
+        padding: 0 20px;
+        padding-top: 20vh;
+        display: none;
     }
 
     .toc div {
@@ -173,3 +203,28 @@ body {
   left: 0;
 }
 
+table {
+    border: 0;
+    margin: auto;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#toc-trigger {
+    position: fixed;
+    top: 0;
+    left: 40px;
+    cursor: pointer;
+    svg {
+        fill: #aaa;
+    }
+    &:hover {
+        svg {
+            fill: #2A9B65;
+        }
+    }
+
+}

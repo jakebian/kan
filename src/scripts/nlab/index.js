@@ -108,6 +108,7 @@ const defnSelectors = [
   '#definition',
   '#definitions',
   '#idea',
+  '#idea_and_definition',
   '#overview',
   '#scope',
   '#statement'
@@ -127,6 +128,8 @@ function getDefn(parsedBody) {
       const attempt = getDefnForSelector(parsedBody, defnSelectors[i]);
       if (attempt) { return attempt; }
   }
+
+  return 'could not load definition'
 
 }
 

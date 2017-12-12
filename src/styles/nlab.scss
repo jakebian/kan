@@ -86,8 +86,8 @@ body {
         margin-top: 100px;
     }
     .maruku_toc {
-        li {
-            margin-top: 20px;
+        p, li {
+            font-size: 18px;
         }
     }
 
@@ -141,4 +141,8 @@ body {
 .tippy-tooltip-content {
     max-height: 450px;
     overflow-y: auto;
+    .theorem_label {
+        font-style: italic;
+        font-size: 22px;
+    }
 }

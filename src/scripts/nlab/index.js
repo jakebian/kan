@@ -70,7 +70,7 @@ $(document).ready(() => {
 
 
 
-    var tocTrigger = $('body').append(
+    $('body').append(
       `<div id="toc-trigger">
         <svg enable-background="new 0 0 32 32" height="32px" id="svg2" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" height="32" width="32"/></g><g id="book_x5F_text_x5F_run"><path d="M32,23.001c0-3.917-2.506-7.24-5.998-8.477V4h-2V1.999h2V0h-23C2.918,0.004,2.294-0.008,1.556,0.354   C0.808,0.686-0.034,1.645,0.001,3c0,0.006,0.001,0.012,0.001,0.018V30c0,2,2,2,2,2h21.081l-0.007-0.004   C28.013,31.955,32,27.946,32,23.001z M2.853,3.981C2.675,3.955,2.418,3.869,2.274,3.743C2.136,3.609,2.017,3.5,2.002,3   c0.033-0.646,0.194-0.686,0.447-0.856c0.13-0.065,0.289-0.107,0.404-0.125C2.97,1.997,3,2.005,3.002,1.999h19V4h-19   C3,4,2.97,4.002,2.853,3.981z M4,30V6h20v8.06C23.671,14.023,23.337,14,22.998,14c-2.142,0-4.106,0.751-5.651,2H6v2h9.516   c-0.413,0.616-0.743,1.289-0.995,2H6v2h8.057c-0.036,0.329-0.059,0.662-0.059,1.001c0,2.829,1.307,5.35,3.348,6.999H4z M23,30   c-3.865-0.008-6.994-3.135-7-6.999c0.006-3.865,3.135-6.995,7-7c3.865,0.006,6.992,3.135,7,7C29.992,26.865,26.865,29.992,23,30z    M22,12H6v2h16V12z"/><polygon points="22,19 22,27 26,23  "/></g></svg>
       </div>`
@@ -84,6 +84,22 @@ $(document).ready(() => {
         $('#side-toc').fadeOut();
       }
     })
+
+    $('body').append(
+      `<div id="topnav-trigger">
+        <svg enable-background="new 0 0 30 30" height="30px" id="Capa_1" version="1.1" viewBox="0 0 30 30" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.9,0.2c-0.2-0.1-0.5-0.2-0.7-0.1l-9.9,4.3L10,0.8c-0.2-0.1-0.4-0.1-0.6,0L1.2,4.6C0.9,4.7,0.8,5,0.8,5.3  v23.9c0,0.3,0.1,0.5,0.4,0.6c0.1,0.1,0.3,0.1,0.4,0.1c0.1,0,0.2,0,0.3-0.1l7.9-3.9l8.2,3.8c0.2,0.1,0.4,0.1,0.6,0l0.1,0c0,0,0,0,0,0  l10.1-4.2c0.3-0.1,0.5-0.4,0.5-0.7V0.8C29.2,0.6,29.1,0.4,28.9,0.2z M8.8,24.7l-6.6,3.3V5.8l6.6-3V24.7z M17.6,27.9l-7.3-3.3V2.6  l7.3,3.2V27.9z M27.7,24.2l-8.6,3.6V5.7L27.7,2V24.2z" fill="#aaa"/></svg>
+      </div>`
+    )
+
+    $('#topnav-trigger').click(() => {
+      if ($('.navigation:not(.navfoot)').is(':hidden')) {
+        $('.navigation:not(.navfoot)').fadeIn();
+      }
+      else {
+        $('.navigation:not(.navfoot)').fadeOut();
+      }
+    })
+
 
   }, 0)
 

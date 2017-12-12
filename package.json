@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/EmailThis/extension-boilerplate"
+    "url": "https://github.com/jakebian/kan"
   },
-  "author": "Bharani <bharani91@gmail.com> (https://github.com/bharani91)",
+  "author": "Jake <jake@keplr.io> (http://jake.run)",
   "bugs": {
     "url": "https://github.com/EmailThis/extension-boilerplate/issues"
   },

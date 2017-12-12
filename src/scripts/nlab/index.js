@@ -1,11 +1,10 @@
 import tippy from 'tippy.js';
 import $ from 'jquery';
 import 'simpler-sidebar';
-// import 'mathjax';
-
+import ScrollProgress from 'scrollprogress'
+import ScrollSpy from './scrollspy'
 
 $(document).ready(() => {
-    console.log('wat');
 
 
     $('body').append(`
@@ -36,6 +35,31 @@ $(document).ready(() => {
             trigger: "#toggle-sidebar",
         }
     } );
+
+    $('body').append(`
+      '<div class="progress-bar"></div>'
+    `)
+
+
+
+    const progressElement = document.querySelector('.progress-bar');
+
+    const progressObserver = new ScrollProgress((x, y) => {
+      progressElement.style.width = y * 100 + '%';
+    });
+
+
+    var spy = new ScrollSpy('#Content', {
+      nav: '.maruku_toc > ul > li > a',
+      className: 'is-inview'
+    });
+
+    var subspy = new ScrollSpy('#Content', {
+      nav: '.maruku_toc > ul > li > ul > li > a',
+      className: 'is-inview'
+    });
+
+
   }, 0)
 
 

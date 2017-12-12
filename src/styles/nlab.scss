@@ -88,7 +88,22 @@ body {
     .maruku_toc {
         p, li {
             font-size: 18px;
+            a {
+                color: #555;
+                &.is-inview {
+                    color: #2A9B65;
+                    border-radius: 3px;
+                    border-bottom: 1px solid #2A9B65;
+                }
+            }
         }
+        position: fixed;
+        left: 0;
+        top: 0;
+        max-width: 300px;
+        max-height: 100%;
+        overflow-y: auto;
+        padding-top: 100px;
     }
 
     .toc div {
@@ -103,6 +118,9 @@ body {
         border-left: 0;
         margin:0;
         background: none;
+    }
+    h1#contents {
+        display: none;
     }
 }
 
@@ -146,3 +164,12 @@ body {
         font-size: 22px;
     }
 }
+
+.progress-bar {
+  background-color: #2A9B65;
+  height: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+

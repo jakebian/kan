@@ -14,10 +14,9 @@
     ]
   },
   "permissions": [
-    "tabs",
     "storage",
-    "http://*/*",
-    "https://*/*"
+    "http://ncatlab.org/*",
+    "https://ncatlab.org/*"
   ],
   "options_ui": {
     "page": "options.html"
